@@ -1,0 +1,454 @@
+/* GLOBAL RESETS & FIXES */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll/gray area */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Safer box sizing across the board */
+}
+
+/* BACKGROUND */
+body {
+  background: linear-gradient(
+    205.39deg,
+    rgba(255, 111, 229, 0.8) 22.95%,
+    rgba(165, 185, 255, 0.8) 44.79%,
+    rgba(116, 152, 225, 0.8) 61.6%,
+    rgba(0, 73, 153, 0.8) 101.78%
+  );
+  opacity: 80%;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+/* FORM STYLES */
+form {
+  background-color: rgba(73, 73, 255, 0.1);
+  border-radius: 30px;
+  padding: 25px 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+form label {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+
+form button {
+  margin: 10px;
+  border-radius: 20px !important;
+}
+
+/* LOGIN PAGE */
+.login-page-cont {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.app-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.deep-breath-icon {
+  width: 120px;
+  height: auto;
+}
+
+.heading {
+  font-family: "Instrument Sans";
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.slogan {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* HOME PAGE */
+.home-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.points-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 95px;
+  height: 56px;
+  padding: 16px 32px;
+  background: #00546e;
+  border-radius: 100px;
+}
+
+.lets-go {
+  width: 52px;
+  height: 23px;
+  font-family: "Indie Flower";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dares {
+  margin-top: 20px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.dare-cont {
+  display: flex;
+  flex-direction: row;
+  border: 2.5px solid white;
+  border-radius: 25px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  overflow: hidden;
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  height: 85px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.dare-q {
+  max-width: 150px;
+  font-family: "Inter";
+  font-weight: 600;
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  margin: 0;
+}
+
+.dare-check {
+  background-color: rgb(81, 255, 81);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 40%;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+}
+
+.dare-p {
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: 600;
+  margin: 0;
+}
+
+/* PROGRESS CIRCLE */
+.progress-circle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-ring {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(0.25turn);
+  transform-origin: center;
+}
+
+.progress-circle-center {
+  position: absolute;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+}
+
+.percent {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progress-circle-wrapperr {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  box-shadow: -3px 3px 10px rgba(239, 239, 239, 0.9);
+  border-radius: 50%;
+  animation: pulse 3s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.main-content {
+  margin-top: 40px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGOUT BUTTON */
+.logout {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  background-color: red;
+  border-radius: 30px;
+}
+
+/* VIEW RANKS BUTTON */
+.view-ranks-btn {
+  background-color: rgb(34, 244, 255);
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+/* TOP SECTION */
+.top-sec {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 10px;
+}
+
+/* PROGRESS PAGE */
+.progress-text {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  color: #000000;
+}
+
+.progress-cont {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progress-cont-text-circle {
+  margin-top: 100px;
+}
+
+/* HISTORY SECTION */
+.previous-dares {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.bottom-cont {
+  width: 100%;
+}
+
+.dare-hist-cont {
+  border-bottom: 1px solid rgb(239, 239, 239);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.dare-hist-cont p {
+  color: rgb(27, 70, 244);
+  margin: 5px;
+  font-weight: bold;
+}
+
+/* RANKS */
+.ranks-points-count {
+  width: 95px;
+  height: 56px;
+  padding: 16px 32px;
+  background: #00546e;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.ranks-page-cont {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.rank-success-msg {
+  width: 90%;
+  margin: 20px auto; /* Center horizontally */
+  text-align: center;
+  color: rgb(0, 102, 153);
+  font-size: 16px;
+  font-weight: bold;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 400px) {
+  .rank-success-msg {
+    font-size: 15px;
+    max-width: 270px;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .rank-success-msg {
+    font-size: 15px;
+    max-width: 200px;
+  }
+}
+
+.rank-text {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: #000000;
+}
+
+.all-ranks {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rank-item {
+  scroll-snap-align: center;
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DARE CLICKED */
+.dare-clicked-cont-cont {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dare-cont-clicked {
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom {
+  margin-top: 100px;
+}
+
+.delete-dare-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgb(255, 53, 53);
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.complete-dare-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgb(39, 255, 32);
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.mic-cont {
+  margin-top: 20px;
+}
+
+.describe-para {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
